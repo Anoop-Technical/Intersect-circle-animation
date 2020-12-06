@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <section class="main_sec" id="main_section">   
+        <div class="left_circ" id="left_circ_1">
+            <div class="mid_circ" id="mid_circ_1">
+            </div>
+        </div>
+        <div class="right_circ" id="right_circ_1">
+
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js"></script>
+    <script>
+        var t1 = new TimelineMax();
+
+        t1.to('#left_circ_1', 2, {
+            left: '30vw'
+        }, 'abc')
+        t1.to('#right_circ_1', 2, {
+            right: '30vw'
+        }, 'abc')
+        t1.to('#left_circ_1', 2, {
+            left: '40vw'
+        }, 'abc1')
+        t1.to('#right_circ_1', 2, {
+            right: '40vw'
+        }, 'abc1')
+        t1.to('#mid_circ_1' , 2, {
+            left: '0vw'
+        }, 'abc1')
+        t1.to('#left_circ_1', 1, {
+            left: '45vw',
+            delay: 1
+        }, 'abc2')
+        t1.to('#right_circ_1', 1, {
+            right: '45vw',
+            delay: 1
+        }, 'abc2')
+        t1.to('#mid_circ_1', 1, {
+            left: '-10vw',
+            delay: 1
+        }, 'abc2');
+    </script>
+</body>
+
+</html>
